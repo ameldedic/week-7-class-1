@@ -9,14 +9,16 @@ body {
 }
 .container {
     margin: 1rem;
-    /*border: 1px solid red;*/
+    /*
+    border: 1px solid red; */
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    /*border: 1px solid blue;*/
+    /*
+    border: 1px solid blue; */
 }
 
 ul li {
@@ -30,7 +32,7 @@ ul img {
 }
 
 
-/* -- First Break-Point at 35 rem -- */
+/* -- First Break-Point at 35rem -- */
 @media screen and (min-width: 35rem) and (max-width: 80rem){
     /*
     body of @media rule containes CSS rules that will be 
@@ -91,8 +93,9 @@ ul img {
 }
 
 
-/* -- Second Break-Point at 80 rem -- */
 
+
+/* -- Second Break-Point at 80rem -- */
 @media screen and (min-width: 80rem) {
     
     .container {
