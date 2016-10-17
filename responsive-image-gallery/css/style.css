@@ -1,0 +1,130 @@
+/* -- MOBILE VIEW CSS RULES - DEFAULT -- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: 1rem;
+    /*border: 1px solid red;*/
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*border: 1px solid blue;*/
+}
+
+ul li {
+    margin: 0 0 1rem 0;
+}
+
+ul img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* -- First Break-Point at 35 rem -- */
+@media screen and (min-width: 35rem) and (max-width: 80rem){
+    /*
+    body of @media rule containes CSS rules that will be 
+    implemented only if the current screen-size is within 
+    the @media rule */
+    
+    /* 
+    Since the <li> elements are floated, 
+    clear the float on <ul> */
+    ul::after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    
+    ul li {
+        /*
+        To expand the width of your 2 columns on count 
+        of removed margin-right from the second column,
+        subtract 0.5rem from 50% instead of 1rem. 
+        The value of removed margin was 1rem. 1rem/2 = 0.5rem.
+        So, 0.5rem is how much less than 1rem you need to 
+        subtract from 50% column-width in order to expand 
+        the column width and compensate for removed margin. 
+        */
+        width: calc(50% - 0.5rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+   /* 
+    ul li:nth-child(2) {
+        margin: 0 0 1rem 0;
+    }
+    
+    ul li:nth-child(4) {
+        margin: 0 0 1rem 0;
+    }
+    
+    ul li:nth-child(6) {
+        margin: 0 0 1rem 0;
+    }
+    
+    ul li:nth-child(8) {
+        margin: 0 0 1rem 0;
+    }
+    
+    ul li:nth-child(12) {
+        margin: 0 0 1rem 0;
+    } */
+    
+    /* Reference:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
+    ul li:nth-child(2n) {
+        margin: 0 0 1rem 0;
+    }
+}
+
+
+/* -- Second Break-Point at 80 rem -- */
+
+@media screen and (min-width: 80rem) {
+    
+    .container {
+        width: 75%;
+        margin: 0 auto
+    }
+    
+    ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    
+    ul li {
+        width: calc(25% - 0.75rem);
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    ul li:nth-child(4n) {
+        margin: 0 0 1rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
