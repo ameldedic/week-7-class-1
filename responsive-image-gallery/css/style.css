@@ -13,7 +13,7 @@ body {
     border: 1px solid red; */
 }
 
-ul {
+.container ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -21,37 +21,37 @@ ul {
     border: 1px solid blue; */
 }
 
-ul li {
+.container ul li {
     margin: 0 0 1rem 0;
 }
 
-ul img {
+.container ul img {
     width: 100%;
     height: auto;
     display: block;
 }
 
 
-/* -- First Break-Point at 35rem -- */
+/* -- First Break-Point at 35rem - TABLET VIEWPORT-- */
 @media screen and (min-width: 35rem) and (max-width: 80rem){
     /*
     body of @media rule containes CSS rules that will be 
     implemented only if the current screen-size is within 
-    the @media rule */
+    the limits set for @media rule */
     
     /* 
     Since the <li> elements are floated, 
     clear the float on <ul> */
-    ul::after {
+    .container ul::after {
         content: "";
         display: block;
         clear: left;
     }
     
     
-    ul li {
+    .container ul li {
         /*
-        To expand the width of your 2 columns on count 
+        To expand the width of your 2 columns on the account 
         of removed margin-right from the second column,
         subtract 0.5rem from 50% instead of 1rem. 
         The value of removed margin was 1rem. 1rem/2 = 0.5rem.
@@ -87,7 +87,7 @@ ul img {
     
     /* Reference:
        https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-    ul li:nth-child(2n) {
+    .container ul li:nth-child(2n) {
         margin: 0 0 1rem 0;
     }
 }
@@ -95,7 +95,7 @@ ul img {
 
 
 
-/* -- Second Break-Point at 80rem -- */
+/* -- Second Break-Point at 80rem - DESKTOP VIEWPORT-- */
 @media screen and (min-width: 80rem) {
     
     .container {
@@ -103,19 +103,19 @@ ul img {
         margin: 0 auto
     }
     
-    ul:after {
+    .container ul:after {
         content: "";
         display: block;
         clear: left;
     }
     
-    ul li {
+    .container ul li {
         width: calc(25% - 0.75rem);
         float: left;
         margin: 0 1rem 1rem 0;
     }
     
-    ul li:nth-child(4n) {
+    .container ul li:nth-child(4n) {
         margin: 0 0 1rem 0;
     }
 }
